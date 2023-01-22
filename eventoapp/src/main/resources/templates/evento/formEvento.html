@@ -1,0 +1,49 @@
+<!doctype>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize-v1.0.0/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="style/styleCss.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EventosApp</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Cadastro de Eventos:</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Eventos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <th:block th:include="mensagemValidacao"></th:block>
+    <div class="container formEvento">
+        <form class="container" method="post">
+            Nome: <input type="text" value="" name="nome"/>
+            <div class="row">
+                <div class="input-field col s6">
+                    Local: <input type="text" value="" name="local"/>
+                </div>
+                <div class="input-field col s3">
+                    Data: <input type="date" value="" name="data"/>
+                </div>
+                <div class="input-field col s3">
+                    Horário: <input type="time" value="" name="horario"/>
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+        </form>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>
+</body>
+</html>
